@@ -1,0 +1,51 @@
+.footer {
+  background-color: #6e07f3;
+  color: white;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+  padding: 10px 30px;
+}
+
+.footer-text {
+  max-width: 80%; /* Ajuste la largeur max du texte */
+}
+
+.footer-text h1 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.footer-text p {
+  max-width: 400px; /* Empêche le texte d’être trop large */
+  margin: 0 auto; /* Centre horizontalement */
+}
+
+.footer-copyright {
+  width: 400px;
+  display: flex;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.footer-icons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 15px; /* Espacement entre les icônes */
+  margin-top: 10px;
+  width: 400px;
+}
+
+.footer-icons img {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
