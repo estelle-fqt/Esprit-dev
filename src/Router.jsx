@@ -11,7 +11,7 @@ const AppRouter = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/portfolio" element={<PortfolioPage />} />
         <Route path="/contact" element={<ContactPage />} />
-        {/* <Route path="*" element={<NotFoundPage />} /> */}
+        <Route path="*" element={<h1>Page non trouvée</h1>} />
       </Routes>
     </BrowserRouter>
   );

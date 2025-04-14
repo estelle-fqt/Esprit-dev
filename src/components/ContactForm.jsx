@@ -38,9 +38,9 @@ function ContactForm() {
   return (
     <section className="contact">
       <h2 className="contact-title">
-        📩 Contactez moi.
+        📩 Contactez nous.
         <br />
-        En quoi puis-je vous aider ?
+        En quoi pouvons-nous vous aider ?
       </h2>
       <form onSubmit={handleSubmit} className="contact-form">
         <div className="input-group">

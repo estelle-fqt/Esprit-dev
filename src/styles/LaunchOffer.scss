@@ -1,0 +1,45 @@
+.offer-banner {
+  background: #a4c6a7;
+  color: #ffffff;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: fixed;
+  top: 0;
+  height: max-content;
+  width: calc(100% - 20px);
+  z-index: 1000;
+
+  .btn-offer {
+    background: #b1a7d3;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #866ed3;
+    }
+  }
+}
+
+/* Version mobile */
+@media (max-width: 768px) {
+  .offer-banner {
+    flex-direction: column;
+    padding: 15px;
+    gap: 10px; /* Réduit l'espace entre les éléments */
+  }
+
+  .btn-offer {
+    width: 80%; /* Adapte le bouton à la largeur de l'écran */
+    max-width: 300px;
+    text-align: center;
+  }
+}

@@ -1,3 +1,4 @@
+import LaunchOffer from "../components/LaunchOffer";
 import Header from "../components/Header";
 import ContactForm from "../components/ContactForm";
 import Footer from "../components/Footer";

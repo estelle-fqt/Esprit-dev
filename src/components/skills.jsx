@@ -1,12 +1,12 @@
 import "../styles/Skills.scss";
-import logoHtml from "../assets/html-5.png";
-import logoCss from "../assets/css-3.png";
-import logoSass from "../assets/sass.png";
-import logoJs from "../assets/js.png";
-import logoReact from "../assets/atom.png";
-import logoGit from "../assets/git.png";
-import logoGithub from "../assets/github.png";
-import logoFigma from "../assets/figma.png";
+import logoHtml from "../assets/html-5.webp";
+import logoCss from "../assets/css-3.webp";
+import logoSass from "../assets/sass.webp";
+import logoJs from "../assets/js.webp";
+import logoReact from "../assets/atom.webp";
+import logoGit from "../assets/git.webp";
+import logoGithub from "../assets/github.webp";
+import logoFigma from "../assets/figma.webp";
 
 const skills = [
   {

@@ -52,7 +52,7 @@ function Services() {
           <div className="pricing-card">
             <h3>Abonnement Mensuel</h3>
             <p>Un suivi régulier avec mises à jour illimitées.</p>
-            <span className="price">XX€/mois</span>
+            <span className="price">59€/mois</span>
             <a href="/contact" className="btn-primary">
               Souscrire
             </a>
@@ -60,7 +60,7 @@ function Services() {
           <div className="pricing-card">
             <h3>Paiement à la Prestation</h3>
             <p>Intervention ponctuelle selon vos besoins et envies.</p>
-            <span className="price">XX€/intervention</span>
+            <span className="price">19€/intervention*</span>
             <a href="/contact" className="btn-secondary">
               Me contacter
             </a>
