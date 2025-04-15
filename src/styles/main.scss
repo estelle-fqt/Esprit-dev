@@ -1,8 +1,10 @@
 body {
   background-color: #1e1e2f;
+  overflow-x: hidden; // 🔒 empêche tout débordement horizontal
 }
 
 * {
   margin: 0;
   font-family: "Manrope", sans-serif;
+  box-sizing: border-box;
 }

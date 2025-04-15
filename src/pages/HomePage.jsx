@@ -9,10 +9,8 @@ import Footer from "../components/Footer";
 function Home() {
   return (
     <>
-      {/* <LaunchOffer /> */}
       <Header />
       <Banner />
-      {/* <OfferPopup /> */}
       <Services />
       <Skills />
       <Footer />

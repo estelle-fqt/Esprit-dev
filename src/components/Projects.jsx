@@ -4,7 +4,7 @@ import projects from "../data/projects";
 function Projects() {
   return (
     <section className="portfolio">
-      <h2 className="portfolio-title">Mes dernières réalisations</h2>
+      <h2 className="portfolio-title">Dernières réalisations</h2>
       <div className="portfolio-container">
         {projects.map((project) => (
           <div key={project.id} className="portfolio-card">

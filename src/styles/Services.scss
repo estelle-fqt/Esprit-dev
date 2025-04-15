@@ -1,7 +1,6 @@
 .services {
   text-align: center;
   padding: 80px 20px;
-  // background-color: #f8f8f8;
 
   .services-title {
     font-size: 2.5rem;
@@ -15,15 +14,60 @@
     gap: 30px;
     max-width: 1100px;
     margin: auto;
+    @media (max-width: 850px) {
+      grid-template-columns: none;
+    }
   }
 
   .service-card {
-    background: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+    position: relative;
+    perspective: 1000px;
+    height: 300px;
+    width: 100%; // 🔹 Fixe la largeur à 100% du parent
     transition: transform 0.3s ease-in-out;
-    text-align: center;
+    cursor: pointer;
+
+    .card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s ease;
+      transform-style: preserve-3d;
+    }
+    &.flipped .card-inner {
+      transform: rotateY(180deg);
+    }
+
+    .card-front,
+    .card-back {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding: 30px;
+      box-sizing: border-box;
+      backface-visibility: hidden;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .card-front {
+      z-index: 2;
+    }
+
+    .card-back {
+      transform: rotateY(180deg);
+      p {
+        padding-top: 10px;
+      }
+    }
 
     &:hover {
       transform: translateY(-5px);
@@ -38,12 +82,13 @@
   .service-title {
     font-size: 1.5rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
   }
 
   .service-description {
     font-size: 1rem;
-    color: #666;
+    color: #333;
+    padding: 0 10px;
   }
 }
 
@@ -51,9 +96,11 @@
 .accompagnement {
   background: #fff;
   padding: 50px;
-  margin-top: 50px;
   border-radius: 10px;
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+  @media (max-width: 425px) {
+    padding: 20px;
+  }
 
   .accompagnement-title {
     font-size: 2rem;
@@ -70,6 +117,9 @@
     width: 70%;
     margin: auto;
     margin-bottom: 40px;
+    @media (max-width: 425px) {
+      width: 90%;
+    }
   }
 
   .pricing-options {
@@ -99,7 +149,7 @@
     .price {
       font-size: 1.3rem;
       font-weight: bold;
-      color: #6e07f3;
+      color: #681cc9;
       display: block;
       margin: 10px 0;
     }
@@ -115,7 +165,7 @@
     }
 
     .btn-primary {
-      background: #6e07f3;
+      background: #681cc9;
       color: white;
       // &:hover {
       //   background: #866ed3;
@@ -124,10 +174,10 @@
 
     .btn-secondary {
       background: transparent;
-      color: #6e07f3;
-      border: 2px solid #6e07f3;
+      color: #681cc9;
+      border: 2px solid #681cc9;
       &:hover {
-        background: #6e07f3;
+        background: #681cc9;
         color: white;
       }
     }

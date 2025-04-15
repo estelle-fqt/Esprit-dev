@@ -1,0 +1,18 @@
+.slider-container {
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+  @media (max-width: 768px) {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+}
+
+.slider-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: opacity 1s ease-in-out;
+  border-radius: 10px;
+}

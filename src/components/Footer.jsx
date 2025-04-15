@@ -1,35 +1,41 @@
 import "../styles/Footer.scss";
-import logoInsta from "../assets/instagram.webp";
-import logoGithub from "../assets/github.webp";
-import logoLinkedin from "../assets/linkedin.webp";
+// import logoInsta from "../assets/instagram.webp";
+// import logoGithub from "../assets/github.webp";
+// import logoLinkedin from "../assets/linkedin.webp";
+// import logoPhone from "../assets/phone.png";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faPhone } from "@fortawesome/free-solid-svg-icons";
+import { FaPhoneAlt, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
     <div className="footer">
       <div className="footer-text">
-        <h1>Estelle Fouqueteau</h1>
+        <div className="footer-phone">
+          {/* <FontAwesomeIcon icon="fa-solid fa-phone" />{" "} */}
+          {/* <img src={logoPhone} alt="icon téléphone" /> */}
+          <FaPhoneAlt />
+          <h1>06.48.17.56.72</h1>
+        </div>
         <p>
-          Une développeuse Web Front-end pationnée qui accompagne les
-          commerçants et artisans a partager leur univers.
+          Esprit dev, entreprise experte et pationnée qui vous accompagne a
+          partager votre univers
         </p>
       </div>
       <p className="footer-copyright">
         © Copyright 2025. Réalisé par Esprit dev
       </p>
       <div className="footer-contact">
-        <p className="footer-mobile">06.48.17.56.72</p>
+        <p className="footer-mobile"></p>
         <div className="footer-icons">
           <a href="https://www.instagram.com/esprit.dev/" target="blank">
-            <img src={logoInsta} alt="icon Instagram" />
-          </a>
-          <a href="https://github.com/estelle-fqt" target="blank">
-            <img src={logoGithub} alt="icon Github" />
+            <FaInstagram />
           </a>
           <a
             href="https://www.linkedin.com/in/estelle-fouqueteau-94417725a/"
             target="blank"
           >
-            <img src={logoLinkedin} alt="icon Linkedin" />
+            <FaLinkedin />
           </a>
         </div>
       </div>

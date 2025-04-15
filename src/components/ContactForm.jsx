@@ -1,5 +1,12 @@
 import { useState } from "react";
 import "../styles/ContactForm.scss";
+import photo from "../assets/estelleFouqueteau.webp"; // remplace par le bon chemin
+import {
+  FaPhoneAlt,
+  FaEnvelope,
+  FaInstagram,
+  FaLinkedin,
+} from "react-icons/fa";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -38,65 +45,100 @@ function ContactForm() {
   return (
     <section className="contact">
       <h2 className="contact-title">
-        📩 Contactez nous.
+        📩 Esprit dev est à votre écoute.
         <br />
         En quoi pouvons-nous vous aider ?
       </h2>
-      <form onSubmit={handleSubmit} className="contact-form">
-        <div className="input-group">
-          <label htmlFor="firstName">Prénom</label>
-          <input
-            type="text"
-            id="firstName"
-            name="firstName"
-            value={formData.firstName}
-            onChange={handleChange}
-            required
-          />
+
+      <div className="contact-content">
+        {/* Partie gauche - infos */}
+        <div className="contact-infos">
+          <img src={photo} alt="Photo de profil" className="contact-photo" />
+          <h3>Estelle Fouqueteau</h3>
+          <p>
+            <FaPhoneAlt /> 06 48 17 56 72
+          </p>
+          <p>
+            <FaEnvelope />
+            <a href="mailto:contact@espritdev.com" className="contact-email">
+              contact@espritdev.com
+            </a>
+          </p>
+
+          <div className="social-links">
+            <a
+              href="https://instagram.com/tonprofil"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaInstagram />
+            </a>
+            <a
+              href="https://linkedin.com/in/tonprofil"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+          </div>
         </div>
 
-        <div className="input-group">
-          <label htmlFor="lastName">Nom</label>
-          <input
-            type="text"
-            id="lastName"
-            name="lastName"
-            value={formData.lastName}
-            onChange={handleChange}
-            required
-          />
-        </div>
+        <form onSubmit={handleSubmit} className="contact-form">
+          <div className="input-group">
+            <label htmlFor="firstName">Prénom</label>
+            <input
+              type="text"
+              id="firstName"
+              name="firstName"
+              value={formData.firstName}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="input-group">
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
+          <div className="input-group">
+            <label htmlFor="lastName">Nom</label>
+            <input
+              type="text"
+              id="lastName"
+              name="lastName"
+              value={formData.lastName}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <div className="input-group">
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
+          <div className="input-group">
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+          </div>
 
-        <button type="submit" className="btn-submit">
-          Envoyer
-        </button>
+          <div className="input-group">
+            <label htmlFor="message">Message</label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+          </div>
 
-        {status && <p className="form-status">{status}</p>}
-      </form>
+          <button type="submit" className="btn-submit">
+            Envoyer
+          </button>
+
+          {status && <p className="form-status">{status}</p>}
+        </form>
+      </div>
     </section>
   );
 }

@@ -1,6 +1,7 @@
 .skills {
   text-align: center;
-  padding: 80px 20px;
+  padding: 20px;
+  padding-bottom: 80px;
 
   .skills-title {
     font-size: 2.5rem;
@@ -26,7 +27,7 @@
 
     .skill-category-title {
       font-size: 2rem;
-      color: #6e07f3;
+      color: #681cc9;
       margin-bottom: 15px;
     }
   }
@@ -54,7 +55,7 @@
 
     &:hover {
       transform: translateY(-5px);
-      background: #6e07f3;
+      background: #681cc9;
       color: white;
     }
   }
@@ -63,7 +64,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 40px; /* Ajuste la taille selon ton design */
+    width: 40px;
     height: 40px;
   }
   .skill-icon img {
@@ -73,14 +74,33 @@
   }
 
   @media (max-width: 768px) {
+    .skills-container {
+      padding: 30px 20px;
+    }
+
+    .skill-category-title {
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
     .skill-list {
-      justify-content: flex-start;
+      justify-content: center; // 🔁 On centre les cartes sur mobile
     }
 
     .skill-card {
       flex-direction: column;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
+      min-width: 120px;
+    }
+
+    .skill-icon {
+      width: 30px;
+      height: 30px;
+    }
+
+    .skill-card span {
+      font-size: 1rem;
     }
   }
 }

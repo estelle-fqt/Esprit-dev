@@ -1,5 +1,6 @@
 import "../styles/Banner.scss";
 import { Link } from "react-router-dom";
+import Slider from "./Slider";
 
 function Banner() {
   return (
@@ -22,7 +23,9 @@ function Banner() {
         </div>
       </div>
       <div className="banner-separator"></div>
-      <div className="banner-slider"></div>
+      <div className="banner-slider">
+        <Slider />
+      </div>
     </div>
   );
 }
